@@ -1,0 +1,14 @@
+name: Hello World Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  say-hello:
+    runs-on: self-hosted
+    steps:
+    - name: Print Hello World
+      shell: cmd
+      run: echo "Hello World!!!"
