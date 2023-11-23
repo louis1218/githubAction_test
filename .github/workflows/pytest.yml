@@ -10,11 +10,6 @@ jobs:
   test-python:
     runs-on: self-hosted
     steps:
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x' # Replace with the version you need
-
       - name: Install pytest
         run: pip install pytest
 
