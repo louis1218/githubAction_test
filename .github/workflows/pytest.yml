@@ -10,17 +10,11 @@ jobs:
   test-python:
     runs-on: self-hosted
     steps:
-      - name: Add Python to PATH
+      - name: Update PATH
         run: |
-          echo 'C:\Users\louisli\AppData\Local\Programs\Python\Python311' >> $Env:PATH
-        shell: cmd
-
-      - name: Install pytest
-        run: |
-          C:\Users\louisli\AppData\Local\Programs\Python\Python311\python.exe -m pip install pytest
+          echo 'C:\Users\louisli\AppData\Local\Programs\Python\Python311\Scripts' >> $Env:PATH
         shell: cmd
 
       - name: Run Pytest
-        run: |
-          C:\Users\louisli\AppData\Local\Programs\Python\Python311\python.exe -m pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
+        run: pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
         shell: cmd
