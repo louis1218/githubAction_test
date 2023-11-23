@@ -12,3 +12,4 @@ jobs:
     steps:
       - name: Run Pytest
         run: pytest test_script.py
+        shell: cmd
