@@ -11,6 +11,8 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Print PATH
+        shell: cmd
         run: echo %PATH%
       - name: Run Pytest
+        shell: cmd
         run: pytest test_script.py
