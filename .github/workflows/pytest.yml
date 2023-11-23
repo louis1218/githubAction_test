@@ -1,4 +1,4 @@
-name: Pytest Workflow for Branches
+name: Python Testing Workflow
 
 on:
   push:
@@ -7,32 +7,21 @@ on:
       - dev
 
 jobs:
-  pytest-on-main:
+  test-python:
     runs-on: self-hosted
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'  # Replace with your specific Python version if needed
-      - name: Install pytest
-        run: pip install pytest
-      - name: Run pytest on main branch
-        run: pytest test_script.py
 
-  pytest-on-dev:
-    runs-on: self-hosted
-    if: github.ref == 'refs/heads/dev'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'  # Replace with your specific Python version if needed
-      - name: Install pytest
-        run: pip install pytest
-      - name: Run pytest on dev branch
+          python-version: '3.x' # Replace with the version you need
+
+      - name: Install Dependencies
+        run: |
+          pip install pytest
+          # Add any other dependencies you have
+
+      - name: Run Pytest
         run: pytest test_script.py
