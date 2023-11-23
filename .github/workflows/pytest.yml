@@ -10,7 +10,7 @@ jobs:
   test-python:
     runs-on: self-hosted
     steps:
+      - name: Print PATH
+        run: echo %PATH%
       - name: Run Pytest
-        shell: cmd
         run: pytest test_script.py
-        
