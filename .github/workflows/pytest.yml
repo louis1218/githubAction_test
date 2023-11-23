@@ -11,5 +11,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Run Pytest
-        run: pytest test_script.py
         shell: cmd
+        run: pytest test_script.py
+        
