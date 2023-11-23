@@ -17,7 +17,6 @@ jobs:
 
       - name: Install pytest
         run: |
-          python -m ensurepip --upgrade
           python -m pip install pytest
         shell: cmd
 
