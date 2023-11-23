@@ -10,10 +10,5 @@ jobs:
   test-python:
     runs-on: self-hosted
     steps:
-      - name: Install Dependencies
-        run: |
-          pip install pytest
-          # Add commands to install any other dependencies
-
       - name: Run Pytest
         run: pytest test_script.py
