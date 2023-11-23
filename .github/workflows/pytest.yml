@@ -17,9 +17,10 @@ jobs:
 
       - name: Install pytest
         run: |
-          python -m pip install pytest
+          C:\Users\louisli\AppData\Local\Programs\Python\Python311\python.exe -m pip install pytest
         shell: cmd
 
       - name: Run Pytest
-        run: pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
+        run: |
+          C:\Users\louisli\AppData\Local\Programs\Python\Python311\python.exe -m pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
         shell: cmd
