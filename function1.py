@@ -1,9 +1,16 @@
 import numpy as np
 
-def function(x, y):
+def addition(x, y):
     return x+y
 
 
+def subtraction(x, y):
+    return x-y
+
+
 if __name__ == "__main__":
-    result = function(4,3)
+    result = addition(4,3)
+    print(result)
+
+    result = subtraction(4,3)
     print(result)
