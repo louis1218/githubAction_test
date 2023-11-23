@@ -9,7 +9,7 @@ def subtraction(x, y):
 
 
 if __name__ == "__main__":
-    result = addition(199,3)
+    result = addition(192,3)
     print(result)
 
     result = subtraction(4,3)
