@@ -10,11 +10,13 @@ jobs:
   test-python:
     runs-on: self-hosted
     steps:
-      - name: Add Python Scripts Directory to PATH
-        run: |
-          echo 'C:\Users\louisli\AppData\Local\Programs\Python\Python311\Scripts' >> $Env:PATH
-          echo 'C:\Users\louisli\AppData\Local\Programs\Python\Python311' >> $Env:PATH
-        shell: cmd
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x' # Replace with the version you need
+
+      - name: Install pytest
+        run: pip install pytest
 
       - name: Run Pytest
         run: pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
