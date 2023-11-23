@@ -15,4 +15,4 @@ jobs:
         run: echo %PATH%
       - name: Run Pytest
         shell: cmd
-        run: pytest test_script.py
+        run: pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
