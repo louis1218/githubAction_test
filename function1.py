@@ -5,5 +5,5 @@ def function(x, y):
 
 
 if __name__ == "__main__":
-    result = function(3,4)
+    result = function(2,3)
     print(result)
