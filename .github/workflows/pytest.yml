@@ -10,11 +10,9 @@ jobs:
   test-python:
     runs-on: self-hosted
     steps:
-      - name: Update PATH
-        run: |
-          echo 'C:\Users\louisli\AppData\Local\Programs\Python\Python311\Scripts' >> $Env:PATH
+      - name: Print PATH
         shell: cmd
-
+        run: echo %PATH%
       - name: Run Pytest
-        run: pytest C:\Users\louisli\Desktop\githubAction\githubAction_test\test_script.py
         shell: cmd
+        run: pytest test_script.py
